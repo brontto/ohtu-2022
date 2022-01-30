@@ -10,6 +10,7 @@ ${HOME URL}  http://${SERVER}
 ${LOGIN URL}  http://${SERVER}/login
 ${REGISTER URL}  http://${SERVER}/register
 ${RESET URL}  http://${SERVER}/tests/reset
+${LOGOUT URL}  http://${SERVER}/logout
 
 *** Keywords ***
 Open And Configure Browser
@@ -25,6 +26,9 @@ Main Page Should Be Open
 
 Welcome Page Should Be Open
     Title Should Be  Welcome to Ohtu Application!
+
+Go To Logout Page
+    Go To  ${LOGOUT URL}
 
 Go To Login Page
     Go To  ${LOGIN URL}
